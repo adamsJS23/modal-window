@@ -4,7 +4,7 @@ const modalWindow = document.querySelector('.modal');
 const btnCloseModal = document.querySelector('.close-modal');
 const overlay = document.querySelector('.overlay');
 
-function toggleModal(){
+function toggleModal() {
   modalWindow.classList.toggle('hidden');
   overlay.classList.toggle('hidden');
 }
@@ -15,9 +15,9 @@ btnsOpenModal.forEach(btn => {
 
 btnCloseModal.addEventListener('click', toggleModal);
 
-document.addEventListener('keydown', function (keycode) {
-  if (keycode.keyCode === 27) {
-    toggleModal()
+document.addEventListener('keydown', function (evt) {
+  if (evt.key === 'Escape') {
+    toggleModal();
   }
 });
 
